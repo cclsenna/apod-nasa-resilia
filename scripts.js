@@ -1,4 +1,6 @@
-document.getElementById('botao').addEventListener('click',getAPI);
+//document.getElementById('botao').addEventListener('click',getAPI);
+
+$('#botao').click(getAPI);
 
 
 
@@ -15,19 +17,28 @@ function getAPI(){
 
     const x=$('#campo-data').val();
 
-    
-
     $.ajax({url:`https://api.nasa.gov/planetary/apod?api_key=EhWtnzHD8M9mO1ZFpF7Y9AcgfwdaM7NzmPtUgafi&date=${x}`,
     method:'get',
     dataType: 'json',
 
     success: function(result){
-        console.log('funcionou');
+        $('#title').text(result.title);
+        $('#exp').text(result.explanation);
+        $('#copy').text(result.copyright);
+        video(result);
+        if(result.media_type=='video'){
+            $('#frame').css('display','block');
+            $('#ibagem').css('display','none');
+            $('#frame').attr("src",result.url);
+        }
+        else {
+            $('#frame').css('display','none');
+            $('#ibagem').css('display','block');
+            $('#ibagem').attr("src",result.url);
+        }
 
-        document.getElementById('title').innerHTML=result.title;
-        document.getElementById('exp').innerHTML=result.explanation;
-
-
+              
+          
     },
 
     error: function(){
@@ -41,6 +52,12 @@ function getAPI(){
     
 
 }
+
+
+
+
+
+
 
 
 

@@ -3,11 +3,21 @@ body{
     background-color: antiquewhite;
 }
 
+#title{
+    font-size:24px;
+    font-weight: bold;
+}
+
 
 .container{
     height: 200px;
     width: 200px;
-    margin: 30% auto 0;
+    margin: 10% auto 0;
     text-align: center;
     border: solid 1px black;
+}
+
+.img-video{
+    
+    width: 50%;
 }
