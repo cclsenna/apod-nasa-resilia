@@ -2,8 +2,13 @@ body{
     min-height:100%;    
 }
 
+h1{
+    font-size:34px;
+    font-weight: bolder;
+}
+
 #title{
-    font-size:24px;
+    font-size:28px;
     font-weight: bold;
 }
 
@@ -11,33 +16,67 @@ body{
 .container{
     height:100vh;
     width: 60vw;
+    
+    background-image: url(../img/39608.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around; 
+
       
 }
 
 
 .secao{
-    position: absolute;
+    position: fixed;
     right: 0;
     top:0;
-    height:100vh;
+    height:100%;
     width: 40vw;
-    background-color:black;
+    background-color:#1f0d30;
+    color:white;
+    padding:5px;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.secao p{
+    font-size: 15px;
 }
 
 #ibagem{
-    height:100%;
-    width: auto;
+    width: 80%;
+    margin: 0 auto 0;
+   
+}
+
+#frame{
+    height:350px;
+    width: 700px;
 }
 
 .secao__data{
-    background-color:black;
+    background-color:#1f0d30;
     padding:5px;
     height: fit-content;
     width: fit-content;
     margin: 10% auto;
 }
 
-.img-video{
-    
-    width: 50%;
+#botao{
+    width: 80px;
+    height:35px;
+    border-radius:4px;
+    font-weight: bold;
 }
+
+#campo-data{
+    width:fit-content;
+    height:30px;
+
+}
+
+
+
+

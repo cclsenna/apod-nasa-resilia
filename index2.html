@@ -8,28 +8,28 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles2.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="./scripts.js" defer></script>
+    <script src="./scripts2.js" defer></script>
 </head>
 <body>
 
 
 <main class="container">
-    <img src="./assets/img/188825.jpg" alt="Foto Nasa" class="img-video" id="ibagem">
-    <iframe src="" frameborder="0" class="img-video"></iframe>
+    <img src="" alt="Foto Nasa" class="img-video" id="ibagem" style="display:none;">
+    <iframe src="" frameborder="0" class="img-video" id='frame'></iframe>
 
 </main>
 
 <section class="secao">
+    <h1>APOD NASA</h1>
     <div class="secao__data">
         <input type="date" id="campo-data" required>
-        <button type="button" id="botao">Enviar</button>
+        <button type="button" id="botao">SEARCH</button>
     </div>
     <div class="secao__info">
         <h2 id="title"></h1>
         <br>
         <p id="copy"></p>
-        <br>
-    
+        <br>    
         <p id="exp"></p>
     </div>
 </section>

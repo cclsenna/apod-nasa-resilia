@@ -7,8 +7,6 @@ $('#botao').click(getAPI);
 function teste (){
     const a=$('#campo-data').val();
 
-
-
 }
 
 
