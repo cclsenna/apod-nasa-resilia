@@ -1,0 +1,43 @@
+body{
+    min-height:100%;    
+}
+
+#title{
+    font-size:24px;
+    font-weight: bold;
+}
+
+
+.container{
+    height:100vh;
+    width: 60vw;
+      
+}
+
+
+.secao{
+    position: absolute;
+    right: 0;
+    top:0;
+    height:100vh;
+    width: 40vw;
+    background-color:black;
+}
+
+#ibagem{
+    height:100%;
+    width: auto;
+}
+
+.secao__data{
+    background-color:black;
+    padding:5px;
+    height: fit-content;
+    width: fit-content;
+    margin: 10% auto;
+}
+
+.img-video{
+    
+    width: 50%;
+}
