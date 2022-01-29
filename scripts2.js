@@ -52,7 +52,7 @@ function getAPI(){
             $('#ibagem').css('display','block');
             $('#ibagem').attr("src",result.url);
         }
-        $('.container__bg').css('filter','blur(1.8px)');
+        $('.container__bg').css('filter','blur(1.9px)');
 
               
           
@@ -81,11 +81,15 @@ function getAPI(){
 
 function validacao(){
 
+    
+
 
     if(!$('#campo-data').val()){
         alert('Campo de data precisa ser preenchido!');
         return false;
     }
+
+    
     return true;
 
     
