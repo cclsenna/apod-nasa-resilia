@@ -1,12 +1,19 @@
 //document.getElementById('botao').addEventListener('click',getAPI);
 
-$('#botao').click(getAPI);
+$('#botao').click((getAPI)=>{
+    if(validacao()) {
+        getAPI();
+    }
+
+
+
+}
+    );
 
 
 
 function teste (){
     const a=$('#campo-data').val();
-
 }
 
 
@@ -21,8 +28,20 @@ function getAPI(){
 
     success: function(result){
         $('#title').text(result.title);
-        $('#exp').text(result.explanation);
-        $('#copy').text('Autor: '+result.copyright);
+        $('#exp').text(result.explanation);        
+
+        if(result.copyright){
+            $('#copy').text('Author: '+result.copyright)            
+
+        }
+        else{
+            $('#copy').text('No Author');         
+
+
+        }
+        
+
+
 
 
 
@@ -36,6 +55,7 @@ function getAPI(){
             $('#ibagem').css('display','block');
             $('#ibagem').attr("src",result.url);
         }
+        $('.container__bg').css('filter','blur(1.8px)');
 
               
           
@@ -64,12 +84,16 @@ function getAPI(){
 
 function validacao(){
     if(!$('#campo-data').val()){
+        alert('Campo de data precisa ser preenchido!');
         return false;
     }
     return;
 
     
 }
+
+
+//1995-06-16,
 
 
 

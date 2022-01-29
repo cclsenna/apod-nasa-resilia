@@ -1,3 +1,8 @@
+@font-face {
+    font-family: nasa;
+    src: url(../Nasa.ttf);
+}
+
 body{
     min-height:100%;    
 }
@@ -5,55 +10,99 @@ body{
 h1{
     font-size:34px;
     font-weight: bolder;
+    letter-spacing: 2px;
+    font-family:'nasa'
 }
 
 #title{
-    font-size:28px;
+    font-size:24px;
     font-weight: bold;
+    margin: 0 0 10px;
+    font-family: 'nasa';
+}
+#copy{
+    margin: 10px 0 ;
+
+
 }
 
 
 .container{
-    height:100vh;
-    width: 60vw;
-    
-    background-image: url(../img/39608.jpg);
+    position: fixed;
+    left: 0;
+    top:0;
+    height:100%;
+    width: 60%;    
+
     background-size: cover;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around; 
+    justify-content: space-around;
+    overflow: hidden;
 
       
 }
 
+.container__bg{
+    position: fixed;
+    background-image: url(../img/39608.jpg);
+    left: 0;
+    top:0;
+    background-size: cover;
+    height: 100%;
+    width: 60%;
+    z-index: -1;
+    /*
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+
+    */
+
+}
+
+.container___img{
+    background-color:white;
+    width: 80%;
+    height: 80%;
+    z-index: 2;
+}
+
+
+
 
 .secao{
-    position: fixed;
+    position: absolute;
     right: 0;
     top:0;
-    height:100%;
-    width: 40vw;
+    height:100vh;
+    width: 40%;
     background-color:#1f0d30;
     color:white;
-    padding:5px;
-    line-height: 1.5em;
+    line-height: 1.3em;
     text-align: center;
+    box-sizing: border-box;
+    overflow: auto;
+ 
+}
+.secao__info{
+    padding: 10px;
 }
 
 .secao p{
-    font-size: 15px;
+    font-size: 16px;
+    font-family:'Courier New', Courier, monospace;
 }
 
 #ibagem{
-    width: 80%;
-    margin: 0 auto 0;
-   
+    width: 100%;
+    height: 100%;
+    margin: 0 auto 0;   
 }
 
 #frame{
-    height:350px;
-    width: 700px;
+    height:70%;
+    width: 85%;
 }
 
 .secao__data{
@@ -61,22 +110,24 @@ h1{
     padding:5px;
     height: fit-content;
     width: fit-content;
-    margin: 10% auto;
+    margin: 5% auto 1%;
 }
 
 #botao{
+    
     width: 80px;
     height:35px;
     border-radius:4px;
     font-weight: bold;
+   
+    margin-left: 15px;
+
 }
 
 #campo-data{
     width:fit-content;
     height:30px;
+    border-radius:4px;
 
 }
-
-
-
 
