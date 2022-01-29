@@ -112,12 +112,26 @@ h1{
 }
 
 #botao{
-    
+    color: whitesmoke;
     width: 80px;
     height:35px;
     border-radius:4px;
     font-weight: bold;   
     margin-left: 15px;
+    cursor: pointer;
+    background-color: gray;
+    border:2px solid black;
+
+}
+
+#botao:hover{
+    border: 2px solid white;
+
+
+}
+
+#botao:active{
+    transform: translate(2px,2px);
 
 }
 
@@ -148,12 +162,15 @@ h1{
   .modal-content {
     margin: auto;
     display: block;
-    width: 85%;
+    width: 90%;
+    max-height: 550px;
     max-width: 700px;
   }
   
 
   /* Add Animation - Zoom in the Modal */
+
+  
   .modal-content {
     animation-name: zoom;
     animation-duration: 0.6s;
@@ -163,6 +180,7 @@ h1{
     from {transform:scale(0)}
     to {transform:scale(1)}
   }
+  
   
   /* The Close Button */
   .close {
