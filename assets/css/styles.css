@@ -1,23 +1,124 @@
+@font-face {
+    font-family: nasa;
+    src: url(../fonts/Nasa.ttf);
+}
+
 body{
     min-height:100%;    
-    background-color: antiquewhite;
+}
+
+h1{
+    font-size:34px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-family:'nasa'
 }
 
 #title{
     font-size:24px;
     font-weight: bold;
+    margin: 0 0 10px;
+    font-family: 'nasa';
+}
+
+#copy{
+    margin: 10px 0 ;
 }
 
 
 .container{
-    height: 200px;
-    width: 200px;
-    margin: 10% auto 0;
-    text-align: center;
-    border: solid 1px black;
+    position: fixed;
+    left: 0;
+    top:0;
+    height:100%;
+    width: 60%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+
+      
 }
 
-.img-video{
-    
-    width: 50%;
+.container__bg{
+    position: fixed;
+    background-image: url(../img/39608.jpg);
+    left: 0;
+    top:0;
+    background-size: cover;
+    height: 100%;
+    width: 60%;
+    z-index: -1;
 }
+
+.container___img{
+    background-color:white;
+    width: 60%;
+    z-index: 2;
+    overflow: auto;
+
+}
+
+
+.secao{
+    position: absolute;
+    right: 0;
+    top:0;
+    height:100vh;
+    width: 40%;
+    background-color:#1f0d30;
+    color:white;
+    line-height: 1.3em;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: auto;
+ 
+}
+.secao__info{
+    padding: 10px;
+}
+
+.secao p{
+    font-size: 16px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#ibagem{
+    max-width: 700px;
+    max-height: 500px;
+    margin-left: auto;  
+    
+}
+
+#frame{
+    height:450px;
+    width: 680px;
+}
+
+.secao__data{
+    background-color:#1f0d30;
+    padding:5px;
+    height: fit-content;
+    width: fit-content;
+    margin: 5% auto 1%;
+}
+
+#botao{
+    
+    width: 80px;
+    height:35px;
+    border-radius:4px;
+    font-weight: bold;   
+    margin-left: 15px;
+
+}
+
+#campo-data{
+    width:fit-content;
+    height:30px;
+    border-radius:4px;
+
+}
+

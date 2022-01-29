@@ -1,15 +1,10 @@
-//document.getElementById('botao').addEventListener('click',getAPI);
-
-$('#botao').click(getAPI);
-
-
-
-function teste (){
-    const a=$('#campo-data').val();
-
-
-
+//evento para chamar a função
+$('#botao').click(()=>{
+    if(validacao()) {
+        getAPI();
+    }
 }
+    );
 
 
 
@@ -23,9 +18,17 @@ function getAPI(){
 
     success: function(result){
         $('#title').text(result.title);
-        $('#exp').text(result.explanation);
-        $('#copy').text('Autor: '+result.copyright);
+        $('#exp').text(result.explanation);        
 
+        if(result.copyright){
+            $('#copy').text('Author: '+result.copyright)            
+
+        }
+        else{
+            $('#copy').text('No Author');         
+
+
+        } 
 
 
         if(result.media_type=='video'){
@@ -38,8 +41,9 @@ function getAPI(){
             $('#ibagem').css('display','block');
             $('#ibagem').attr("src",result.url);
         }
+        $('.container__bg').css('filter','blur(1.9px)');
 
-              
+             
           
     },
 
@@ -65,13 +69,40 @@ function getAPI(){
 
 
 function validacao(){
+    let dataFmt=Date.parse($('#campo-data').val());
+    let today=Date.now();
+    let min=Date.parse('1995-06-16');
+
+
+    
+
+
     if(!$('#campo-data').val()){
+        alert('Campo de data precisa ser preenchido!');
         return false;
     }
-    return;
+    else if(dataFmt<min){
+        alert('A data mínima para pesquisa é 1995-06-16.Por favor, tente novamente.');
+        return false;
+
+
+    } 
+    
+    else if(dataFmt>today){
+        alert('A data máxima para pesquisa é o dia de hoje.Por favor, tente novamente.');
+        return false;
+
+
+    } 
+    return true;
 
     
 }
+
+
+//1995-06-16
+//19950716
+
 
 
 
