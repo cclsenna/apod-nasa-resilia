@@ -1,12 +1,9 @@
 //document.getElementById('botao').addEventListener('click',getAPI);
 
-$('#botao').click((getAPI)=>{
+$('#botao').click(()=>{
     if(validacao()) {
         getAPI();
     }
-
-
-
 }
     );
 
@@ -83,11 +80,13 @@ function getAPI(){
 
 
 function validacao(){
+
+
     if(!$('#campo-data').val()){
         alert('Campo de data precisa ser preenchido!');
         return false;
     }
-    return;
+    return true;
 
     
 }
