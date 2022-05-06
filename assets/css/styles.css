@@ -4,7 +4,10 @@
 }
 
 body{
-    min-height:100%;    
+    min-height:100%;
+    background-color:#1f0d30;
+
+      
 }
 
 h1{
@@ -29,7 +32,6 @@ h1{
 .container{
     position: fixed;
     left: 0;
-    top:0;
     height:100%;
     width: 60%;
     background-size: cover;
@@ -68,7 +70,6 @@ h1{
     top:0;
     height:100vh;
     width: 40%;
-    background-color:#1f0d30;
     color:white;
     line-height: 1.3em;
     text-align: center;
@@ -104,7 +105,6 @@ h1{
 }
 
 .secao__data{
-    background-color:#1f0d30;
     padding:5px;
     height: fit-content;
     width: fit-content;

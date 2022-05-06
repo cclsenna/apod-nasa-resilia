@@ -7,48 +7,50 @@
     <title>APOD NASA</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+    <script src="./jquery-3.6.0.js" defer></script>
+    <script src="./scripts.js" defer></script>
 
 <body>
 
+    <main class="secao">
+        <div class="secao__data">
+            <h1>APOD NASA</h1>
+            <br>
+            <input type="date" id="campo-data" min="1995-06-16">
+            <button type="button" id="botao">SEARCH</button>
+        </div>
+        <div class="secao__info">
+            <h2 id="title">A new picture every day</h1>
+            <p id="copy">Press Search to look beyond the lens of NASA and learn about the universe.</p>
+            <p id="exp"></p>
+        </div>
+    </main>
 
-<main class="container">
+
+<section class="container">
     <div class="container__bg"></div>
     <div class="container__img">
         <img src="" alt="Foto Nasa" class="img-video" id="ibagem" style="display:none;">
         <iframe src="" frameborder="0" class="img-video" id='frame' style="display:none;"></iframe>
 
     </div>
-
-
-</main>
-
-<section class="secao">
-    <div class="secao__data">
-        <h1>APOD NASA</h1>
-        <br>
-        <input type="date" id="campo-data" min="1995-06-16">
-        <button type="button" id="botao">SEARCH</button>
-    </div>
-    <div class="secao__info">
-        <h2 id="title">A new picture every day</h1>
-        <p id="copy">Press Search to look beyond the lens of NASA and learn about the universe.</p>
-        <p id="exp"></p>
-    </div>
 </section>
+
+
+
+
+
 <div id="myModal" class="modal">
 
-    <!-- The Close Button -->
-    <span class="close">&times;</span>
-  
-    <!-- Modal Content (The Image) -->
+    <span class="close">&times;</span> 
+
     <img class="modal-content" id="img01">
   
   </div>
 
-  <!-- Modal Content (The Image) -->
 
-<script src="./jquery-3.6.0.js"></script>
-<script src="./scripts.js"></script>
+
 </head>   
 </body>
 </html>
